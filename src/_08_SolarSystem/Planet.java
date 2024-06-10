@@ -15,6 +15,22 @@ public class Planet {
     public Planet(int diameterPixels) {
         this.diameter = diameterPixels;
     }
+    public Planet(String planetColor, int distanceFromSun, int oribtalPeriod) {
+    	this.planetColor = planetColor;
+    	this.distanceFromSun = distanceFromSun;
+    	this.orbitalPeriod = orbitalPeriod;
+	}
+	public Planet(String planetColor, int distanceFromSun, double orbitalPeriod) {
+		this.planetColor = planetColor;
+    	this.distanceFromSun = distanceFromSun;
+    	this.orbitalPeriod = (int) orbitalPeriod;
+	}
+	String planetColor;
+    int distanceFromSun;
+    int orbitalPeriod;
+    
+//
+    
 
     public void draw(Graphics g, int numDays) {
         /*
