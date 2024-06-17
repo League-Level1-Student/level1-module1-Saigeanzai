@@ -12,22 +12,24 @@ public class Planet {
     int x, y, width, height;
     int diameter;
     
-    public Planet(int diameterPixels) {
-        this.diameter = diameterPixels;
-    }
-    public Planet(String planetColor, int distanceFromSun, int oribtalPeriod) {
-    	this.planetColor = planetColor;
-    	this.distanceFromSun = distanceFromSun;
-    	this.orbitalPeriod = orbitalPeriod;
-	}
-	public Planet(String planetColor, int distanceFromSun, double orbitalPeriod) {
-		this.planetColor = planetColor;
-    	this.distanceFromSun = distanceFromSun;
-    	this.orbitalPeriod = (int) orbitalPeriod;
-	}
-	String planetColor;
-    int distanceFromSun;
+    Color color;
+    int avgDistFromSun;
     int orbitalPeriod;
+   // public Planet(int diameterPixels) {
+       // this.diameter = diameterPixels;
+   // }
+    public Planet(int diameterPixels, Color color, int distanceFromSun, int daysPerFullOrbit) {
+    	this.color = color;
+    	this.avgDistFromSun = 2*distanceFromSun;
+    	this.orbitalPeriod = daysPerFullOrbit;
+    	this.diameter = diameterPixels;
+	//}
+	//public Planet(String planetColor, int distanceFromSun, double orbitalPeriod) {
+		//this.planetColor = planetColor;
+    	//this.distanceFromSun = distanceFromSun;
+    	//this.orbitalPeriod = (int) orbitalPeriod;
+	}
+
     
 //
     
@@ -37,9 +39,9 @@ public class Planet {
          * Local variables
          * Reassign or remove these after creating the correct member variables
          */
-        int avgDistFromSun = 1496 / 10;     // You can choose a different scaling than divided by 10
-        int orbitalPeriod = 365;
-        Color color = Color.BLUE;
+        int avgDistFromSun = this.avgDistFromSun;     // You can choose a different scaling than divided by 10
+        int orbitalPeriod = this.orbitalPeriod;
+        Color color = this.color;
         
         /*
          * Update position
