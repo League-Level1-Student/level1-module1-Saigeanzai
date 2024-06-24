@@ -62,10 +62,10 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
      * which side the hippo is drawn.
      */
     
-    Hippo LizzieHippo = new Hippo("bottom left", "Lizzie Hippo", Color.PINK);
-    Hippo HenryHippo = new Hippo("top left", "Henry Hippo", Color.ORANGE);
-    Hippo HomerHippo = new Hippo("botton right", "Homer Hippo", Color.GREEN);
-    Hippo HarryHippo = new Hippo("top right", "Harry Hippo", Color.YELLOW);
+    Hippo LizzieHippo = new Hippo("right", "Lizzie Hippo", Color.PINK);
+    Hippo HenryHippo = new Hippo("left", "Henry Hippo", Color.ORANGE);
+    Hippo HomerHippo = new Hippo("down", "Homer Hippo", Color.GREEN);
+    Hippo HarryHippo = new Hippo("up", "Harry Hippo", Color.YELLOW);
 
     
     public HungryHungryHippos() {
@@ -124,12 +124,9 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
             checkHippoEating(HenryHippo);
             checkHippoEating(HomerHippo);
             checkHippoEating(HarryHippo);
-            
-            
-            
-            
-            
         }
+        
+        
     }
 
     @Override
