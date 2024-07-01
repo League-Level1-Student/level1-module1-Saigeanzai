@@ -256,7 +256,8 @@ public class TurfWar extends PApplet {
 player1.drawPlayer();
 player2.drawPlayer();
 		// 11. Call the update method for both players.
-
+player1.update();
+player2.update();
 		// 12. Call the isGameOver method.
 isGameOver();
 		// 13. Call the displayStats method.
@@ -273,7 +274,8 @@ if (gameOver==true) {
 		 * 15. Call the enableMovement method for both players and pass keyCode to the
 		 * method.
 		 */
-
+player1.enableMovement(keyCode);
+player2.enableMovement(keyCode);
 	}
 
 	@Override
@@ -282,7 +284,8 @@ if (gameOver==true) {
 		 * 16. Call the disableMovement method for both players and pass keyCode to the
 		 * method.
 		 */
-
+player1.disableMovement(keyCode);
+player2.disableMovement(keyCode);
 	}
 
 	/*
